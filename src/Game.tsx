@@ -4,9 +4,6 @@ import TargetDot from "./components/TargetDot.tsx"
 import Overview from "./Overview.tsx"
 
 interface Detail {
-    amountOfDots: Array<number>
-    found: boolean
-    amount: number
     explode: Function
 }
 
@@ -24,16 +21,12 @@ const Game = (props: Detail) => {
     const handleFind = () => {
         setCount(count+1)
         setScore(score+10)
-        setAmount(null)
         setAmount(Math.ceil(amount * 1.25))
         setFound(!found)
     }
     const addGoldToScore = () => {
         setScore(score+50)
     }
-
-    useEffect(() => {
-    }, [props.amount])
 
     return (
         <div className="game-container">

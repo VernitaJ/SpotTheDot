@@ -1,14 +1,17 @@
-import randomColor from "randomcolor";
 import { Dispatch, useEffect, useState } from "react";
 
 type PlaceCoin = {
-    backgroundColor: string,
+    backgroundColor: string
     height: string
     width: string
     left: string
     top: string
 };
 
+type Coords = {
+    left: string,
+    top: string
+}
 interface Handler {
     explode : Function
     addToScore: Function

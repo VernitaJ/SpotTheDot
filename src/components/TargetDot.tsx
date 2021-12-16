@@ -1,8 +1,9 @@
+import { url } from "inspector";
 import { Dispatch, useEffect, useState } from "react";
-import wally from './waldo.jpg'
+import wally from "../assets/waldo.jpg"
 
 type PlaceDot = {
-    background: string,
+    backgroundImage: string,
     height: string
     width: string
     left: string
@@ -22,7 +23,7 @@ const TargetDot = (props: Target) => {
 
     useEffect(() => {
         setDotStyle(
-            {   background: "maroon",
+            {   backgroundImage: `url(${wally})`,
                 height: `13px`,
                 width: `13px`,
                 left: `${Math.random() * 100}vh`,

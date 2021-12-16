@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useReducer, Component } from "react";
 import "./App.css";
 import Game from './Game.tsx'
-import audio from './fail.mp3';
+import audio from './assets/fail.mp3';
 
 class App extends React.Component {
   state = { 

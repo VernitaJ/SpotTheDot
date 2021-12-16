@@ -96,7 +96,7 @@ background-color: slategray;
   background-color: black;
   height: 100vh;  
   width: 100vw;
-  background-image: url('./images/yoda.jpg');
+  background-image: url('./assets/yoda.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
