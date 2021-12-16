@@ -1,0 +1,112 @@
+.App {
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 4vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+background-color: slategray;
+.App-link {
+  color: #61dafb;
+}
+
+/* Generic padding */
+.main {
+  text-align: center;
+  padding: 25px 50px 25px 50px;
+}
+
+.start-screen {
+  width:100%;
+  height:0;
+  padding-bottom:56%;
+  position:relative;
+}
+
+.start-background{
+  width:100%;
+  height:100%; 
+  position:absolute;
+}
+
+.start-button {
+  position:absolute;
+  top: 54vh;
+  left: 45vw;
+  width: 10%;
+  height: 10%;
+  border: 4px dotted rgb(140, 243, 6);
+  border-radius: 50%;
+  background-color: rgb(14, 6, 61);
+  color: yellowgreen;
+  font-family: "Helvetica Neue", Helvetica, Arial;
+  font-size: large;
+}
+
+.game-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(184, 179, 179);
+  font-size: large;
+}
+.dot {
+  border-radius: 50%;
+  position: absolute;
+}
+
+.coin {
+  border: 1px dotted rgb(230, 112, 16);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.bomb {
+  border-radius: 50%;
+  position: absolute;
+}
+
+.overview {
+  margin-top: 0;
+  display: flex;
+  background-color: rgb(0, 0, 77);
+  color: white;
+  font-size: 30px;
+  justify-content: space-around;
+}
+
+.death {
+  background-color: black;
+  height: 100vh;  
+  width: 100vw;
+  background-image: url('./images/yoda.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
