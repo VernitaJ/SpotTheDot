@@ -1,19 +1,11 @@
 .App {
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-image: url('./assets/dots.jpg');
+  height: 80vh;
+  width: 100vw;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #22082c34;
   min-height: 4vh;
   display: flex;
   flex-direction: column;
@@ -23,7 +15,6 @@
   color: white;
 }
 
-background-color: slategray;
 .App-link {
   color: #61dafb;
 }
@@ -36,7 +27,7 @@ background-color: slategray;
 
 .start-screen {
   width:100%;
-  height:0;
+  height:100%;
   padding-bottom:56%;
   position:relative;
 }
@@ -67,28 +58,89 @@ background-color: slategray;
   background-color: rgb(184, 179, 179);
   font-size: large;
 }
+
+
+.dot-container {
+  width: 100vw;
+  height: 80vh;
+  background-color: rgb(184, 179, 179);
+  font-size: large;
+}
+
 .dot {
   border-radius: 50%;
   position: absolute;
 }
 
+.target {
+  position: absolute;
+  background-image: url("./assets/wally.png");
+  background-size: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+
 .coin {
   border: 1px dotted rgb(230, 112, 16);
+  background-image: url("./assets/coin.jpg");
+  background-size: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 50%;
   position: absolute;
+}
+
+.log-container {
+  position: absolute;
+  padding: 20px;
+  width: 40vw;
+  height: 10vh;
+  display: flex;
+  justify-content:space-between;
+  background:rgb(0, 0, 77, 0.9);
+  border-radius: 60px;
+  left: 10vw;
+  top: 10vh;
+}
+
+.input {
+  margin-top: 10px;
+}
+
+.log-buttonYes {
+  background-color: rgb(19, 59, 83);
+  border: none;
+  color: white;
+  border-radius: 30px;
+}
+
+.log-buttonNo {
+  margin-top: 10px;
+  background-color: rgb(9, 118, 185);
+  color:white;
+  border: none;
+  border-radius: 30px;
+  margin-bottom: 10px;
 }
 
 .bomb {
   border-radius: 50%;
   position: absolute;
+  background-image: url("./assets/bomb.png");
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .overview {
   margin-top: 0;
   display: flex;
+  height: 15vh;
+  width: 100vw;
   background-color: rgb(0, 0, 77);
   color: white;
-  font-size: 30px;
+  font-size: 50px;
   justify-content: space-around;
 }
 

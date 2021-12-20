@@ -1,5 +1,5 @@
 import randomColor from "randomcolor";
-import { Dispatch, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 type PlaceDot = {
     backgroundColor: string,
@@ -20,26 +20,25 @@ type Coords = {
 }
 
 const Dot = (props: Target) => {
-    const [color, setColor] = useState(randomColor());
+    const [color, setColor] = useState(randomColor({ luminosity: 'dark' }));
     const [coords, setCoords] = useState<Coords>({
         left: `${Math.random() * 100}vw`,
-        top: `${Math.random() * 100}vh`
+        top: `${Math.floor(Math.random() * (100 - 20 + 1) + 15)}vh`
     });
     const [found, setFound] = useState(false)
     const [dotStyle, setDotStyle] = useState<PlaceDot>();
 
-
     useEffect(() => {
-        let size = Math.random() * 20
+        let size = Math.random() * 40
         setCoords({
-            left: `${Math.random() * 100}vh`,
-            top: `${Math.random() * 100}vh`
+            left: `${Math.random() * 100}vw`,
+            top: `${Math.floor(Math.random() * (100 - 20 + 1) + 15)}vh`
         })
         setDotStyle(
             {
                 backgroundColor: color,
-                height: `${Math.random() * 20}px`,
-                width: `${Math.random() * 20}px`,
+                height: `${size}px`,
+                width: `${size}px`,
                 left: coords.left,
                 top: coords.top
             })

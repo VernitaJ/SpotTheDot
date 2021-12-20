@@ -21,7 +21,7 @@ const Coin = (props : Handler) => {
     const [color, setColor] = useState("gold");
     const [coords, setCoords] = useState<Coords>({
         left: `${Math.random() * 200}vh`,
-        top: `${Math.random() * 100}vh`
+        top: `${Math.floor(Math.random() * (100 - 20 + 1) + 15)}vh`
     });
     const [found, setFound] = useState(false)
     const [dotStyle, setDotStyle] = useState<PlaceCoin>();
@@ -30,17 +30,17 @@ const Coin = (props : Handler) => {
     useEffect(() => {
         setCoords({
             left: `${Math.random() * 200}vh`,
-            top: `${Math.random() * 100}vh`
+            top: `${Math.floor(Math.random() * (100 - 20 + 1) + 15)}vh`
         })
         setDotStyle(
             {
                 backgroundColor: color,
-                height: `11px`,
-                width: `11px`,
+                height: `30px`,
+                width: `30px`,
                 left: coords.left,
                 top: coords.top
             })
-    }, [color])
+    }, [found])
 
     const addGold = () => {
         props.addToScore()
@@ -48,8 +48,8 @@ const Coin = (props : Handler) => {
 
     const changeToBomb = () => {
         addGold()
-        setColor("rgb(0,0,0)");
         setFound(true)
+        setColor("transparent");
     }
     
     const explode = () => {
@@ -58,7 +58,7 @@ const Coin = (props : Handler) => {
 
     return (
         <div
-            className={color==="gold" ? "coin" : "bomb"} 
+            className={!found ? "coin" : "bomb"} 
             style={dotStyle}
             onMouseOver={() => color=="gold" ? changeToBomb() : props.explode() }
         >

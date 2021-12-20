@@ -1,9 +1,6 @@
-import { url } from "inspector";
 import { Dispatch, useEffect, useState } from "react";
-import wally from "../assets/waldo.jpg"
 
 type PlaceDot = {
-    backgroundImage: string,
     height: string
     width: string
     left: string
@@ -23,11 +20,10 @@ const TargetDot = (props: Target) => {
 
     useEffect(() => {
         setDotStyle(
-            {   backgroundImage: `url(${wally})`,
-                height: `13px`,
-                width: `13px`,
-                left: `${Math.random() * 100}vh`,
-                top: `${Math.random() * 100}vh`
+            {   height: `30px`,
+                width: `30px`,
+                left: `${Math.random() * 100}vw`,
+                top: `${Math.floor(Math.random() * (80 - 15 + 1) + 15)}vh`
             })
     }, [found])
 
@@ -38,7 +34,7 @@ const TargetDot = (props: Target) => {
     
     return (
         <div
-            className="dot"
+            className="target"
             style={dotStyle}
             onMouseOver={handleLocal}
         >

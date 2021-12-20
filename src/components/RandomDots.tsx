@@ -23,13 +23,6 @@ const RandomDots = (props: Amount) => {
     const [found, setFound] = useState(false)
     const [dotStyle, setDotStyle] = useState<PlaceDot>();
 
-    // let size = Math.random() * 8
-    // setDotStyle({backgroundColor: randomColor(),
-    //         height: `${size}px`,
-    //         width: `${size}px`,
-    //         left: `${Math.random() * 200}vh`,
-    //         top: `${Math.random() * 100}vh`})
-
     useEffect(()=> {
         componentArray = []
     }, [props.count])
@@ -37,8 +30,8 @@ const RandomDots = (props: Amount) => {
     let componentArray = []
     
     for (var i = 0; i < props.amount; i++) {
-            componentArray.push(<div><Dot />
-            {i % 10 == 0 ? <Coin explode={props.explode} addToScore={props.addGoldToScore}/>: null}
+            componentArray.push(<div key={i} ><Dot />
+            {i % 5 == 0 ? <Coin explode={props.explode} addToScore={props.addGoldToScore}/>: null}
             </div>)
         }
 
